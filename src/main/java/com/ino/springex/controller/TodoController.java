@@ -1,5 +1,6 @@
 package com.ino.springex.controller;
 
+import com.ino.springex.dto.TodoDTO;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +22,9 @@ public class TodoController {
     }
 
     @PostMapping("/register")
-    public void registerPOST() {
+    public void registerPOST(TodoDTO todoDTO) {
         log.info("POST todo register..........");
+        log.info(todoDTO);
     }
 
     @GetMapping("/ex1")
