@@ -17,16 +17,7 @@ import java.sql.Connection;
 public class SampleTests {
 
     @Autowired
-    private SampleService sampleService;
-
-    @Autowired
     private DataSource dataSource;
-
-    @Test
-    public void testService1() {
-        log.info(sampleService);
-        Assertions.assertNotNull(sampleService);
-    }
 
     @Test
     public void testConnection() throws Exception {
