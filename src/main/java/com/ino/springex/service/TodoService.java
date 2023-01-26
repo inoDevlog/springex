@@ -1,14 +1,15 @@
 package com.ino.springex.service;
 
+import com.ino.springex.dto.PageRequestDTO;
+import com.ino.springex.dto.PageResponseDTO;
 import com.ino.springex.dto.TodoDTO;
-
-import java.util.List;
 
 public interface TodoService {
 
     void register(TodoDTO todoDTO);
 
-    List<TodoDTO> getAll();
+    //    List<TodoDTO> getAll();
+    PageResponseDTO<TodoDTO> getList(PageRequestDTO pageRequestDTO);
 
     TodoDTO getOne(Long tno);
 
